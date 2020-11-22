@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:delimeals/category_meals_screen.dart';
+import './category_meals_screen.dart';
 
 class CategoryItem extends StatelessWidget {
   final String title;
@@ -29,7 +29,6 @@ class CategoryItem extends StatelessWidget {
           title,
           style: Theme.of(context).textTheme.title,
         ),
-        color: color,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
