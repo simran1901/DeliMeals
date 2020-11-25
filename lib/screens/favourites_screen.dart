@@ -12,7 +12,7 @@ class FavouritesScreen extends StatelessWidget {
     if (favouriteMeals.isEmpty) {
       return Center(
         child: Container(
-          width: 400,
+          width: 380,
           child: Text(
             'You have no favourites yet - start adding some!',
             style: TextStyle(
