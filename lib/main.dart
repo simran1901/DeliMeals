@@ -8,7 +8,13 @@ import './screens/filters_screen.dart';
 import './dummy_data.dart';
 import './models/meal.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+  runApp(MyApp());
+}
 
 class MyApp extends StatefulWidget {
   @override
