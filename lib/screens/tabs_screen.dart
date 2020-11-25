@@ -21,7 +21,7 @@ class _TabsScreenState extends State<TabsScreen> {
   void initState() {
     _pages = [
     {
-      'pages': CategoriesScreen(),
+      'page': CategoriesScreen(),
       'title': 'Categories',
     },
     {
