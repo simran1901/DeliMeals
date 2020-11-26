@@ -9,6 +9,7 @@ class MealItem extends StatelessWidget {
   final int duration;
   final Complexity complexity;
   final Affordability affordability;
+  final AppBar appBar;
 
   MealItem({
     @required this.id,
@@ -17,6 +18,7 @@ class MealItem extends StatelessWidget {
     @required this.affordability,
     @required this.complexity,
     @required this.duration,
+    @required this.appBar,
   });
 
   String get complexityText {
@@ -67,6 +69,7 @@ class MealItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
     return InkWell(
       onTap: () => selectMeal(context),
       child: Card(
@@ -86,7 +89,10 @@ class MealItem extends StatelessWidget {
                   ),
                   child: Image.network(
                     imageUrl,
-                    height: 250,
+                    height: (mediaQuery.size.height -
+                            appBar.preferredSize.height -
+                            mediaQuery.padding.top) *
+                        0.3,
                     width: double.infinity,
                     fit: BoxFit.cover,
                   ),
@@ -95,7 +101,7 @@ class MealItem extends StatelessWidget {
                   bottom: 20,
                   right: 10,
                   child: Container(
-                    width: 380,
+                    width: mediaQuery.size.width * 0.8,
                     color: Colors.black54,
                     padding: EdgeInsets.symmetric(
                       vertical: 5,
@@ -115,7 +121,7 @@ class MealItem extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(17),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[

@@ -47,12 +47,13 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+    final PreferredSizeWidget appBar = AppBar(
         title: Text(
           categoryTitle,
         ),
-      ),
+      );
+    return Scaffold(
+      appBar: appBar,
       body: ListView.builder(
         itemBuilder: (ctx, index) {
           return MealItem(
@@ -62,6 +63,7 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
             duration: displayedMeals[index].duration,
             affordability: displayedMeals[index].affordability,
             complexity: displayedMeals[index].complexity,
+            appBar: appBar,
           );
         },
         itemCount: displayedMeals.length,

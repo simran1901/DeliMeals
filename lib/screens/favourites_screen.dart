@@ -10,15 +10,19 @@ class FavouritesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (favouriteMeals.isEmpty) {
-      return Center(
-        child: Container(
-          width: 380,
-          child: Text(
-            'You have no favourites yet - start adding some!',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
+      return Container(
+        color: Colors.yellow[100],
+        padding: EdgeInsets.symmetric(
+          horizontal: 15,
+          vertical: 30,
+        ),
+        width: double.infinity,
+        alignment: Alignment.center,
+        child: Text(
+          'You have no favourites yet - start adding some!',
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
           ),
         ),
       );
