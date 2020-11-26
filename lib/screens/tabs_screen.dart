@@ -20,15 +20,15 @@ class _TabsScreenState extends State<TabsScreen> {
   @override
   void initState() {
     _pages = [
-    {
-      'page': CategoriesScreen(),
-      'title': 'Categories',
-    },
-    {
-      'page': FavouritesScreen(widget.favouriteMeals),
-      'title': 'Your Favourites',
-    },
-  ];
+      {
+        'page': CategoriesScreen(),
+        'title': 'Categories',
+      },
+      {
+        'page': FavouritesScreen(widget.favouriteMeals),
+        'title': 'Your Favourites',
+      },
+    ];
     super.initState();
   }
 
